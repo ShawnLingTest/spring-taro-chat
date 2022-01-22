@@ -1,0 +1,22 @@
+.chat-msg-container {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  // margin-right: 50px;
+  overflow: hidden;
+
+  &--text {
+    padding: 8px 12px;
+  }
+
+  &--image {
+    overflow: hidden;
+    max-width: 50vw;
+    max-height: 260px;
+    image {
+      display: block;
+      width: 100%;
+      height: "auto";
+    }
+  }
+}

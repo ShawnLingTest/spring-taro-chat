@@ -1,0 +1,54 @@
+$input-v-size: 12px;
+// input 行高
+$input-inner-height: 24px;
+// input height
+$input-height: $input-inner-height + $input-v-size * 2;
+
+$color-send-button: red;
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background: white;
+  box-sizing: border-box;
+  padding: 12px;
+
+  .innerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // height: $min-height;
+  }
+
+  .inputContainer {
+    width: 100%;
+    border-radius: 8px;
+    padding: $input-v-size 12px;
+    box-sizing: border-box;
+    border: 2px solid #eee;
+    background: #eee;
+    textarea {
+      width: 100%;
+      font-size: 24px;
+      line-height: $input-inner-height;
+      padding: 0;
+      margin: 0;
+      max-height: $input-inner-height * 4;
+    }
+  }
+}
+
+.sendMsgButton {
+  // display: flex;
+  // flex: 1;
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  background-color: $color-send-button;
+  font-size: 24px;
+  border-radius: 20px;
+  color: white;
+  margin: 0 12px;
+}

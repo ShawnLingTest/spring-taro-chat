@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitle: "即时聊天",
+  navigationBarTitleText: "即时聊天",
 };

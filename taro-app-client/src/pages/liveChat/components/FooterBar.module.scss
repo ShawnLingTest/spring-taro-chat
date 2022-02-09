@@ -1,54 +1,54 @@
-$input-v-size: 12px;
-// input 行高
-$input-inner-height: 24px;
-// input height
-$input-height: $input-inner-height + $input-v-size * 2;
-
-$color-send-button: red;
+@import "../theme.scss";
 
 .container {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100vw;
-  background: white;
+  background: $color-footer-bg;
   box-sizing: border-box;
-  padding: 12px;
+  padding: 24px;
+  transition: bottom 0.1s;
 
   .innerContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    // height: $min-height;
   }
 
   .inputContainer {
     width: 100%;
-    border-radius: 8px;
-    padding: $input-v-size 12px;
+    border-radius: 50px;
+    padding: 12px 24px;
     box-sizing: border-box;
-    border: 2px solid #eee;
-    background: #eee;
+    border: 2px solid white;
+    background: white;
     textarea {
       width: 100%;
       font-size: 24px;
-      line-height: $input-inner-height;
+      line-height: 24px;
       padding: 0;
       margin: 0;
-      max-height: $input-inner-height * 4;
+      max-height: 24px * 4;
     }
   }
 }
 
-.sendMsgButton {
-  // display: flex;
-  // flex: 1;
-  width: 200px;
-  height: 100%;
-  text-align: center;
-  background-color: $color-send-button;
-  font-size: 24px;
-  border-radius: 20px;
-  color: white;
-  margin: 0 12px;
+.toolContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  & > view {
+    flex: 1;
+    display: flex;
+    height: 90px;
+    align-items: center;
+
+    text {
+      flex: 1;
+      text-align: center;
+      font-size: 48px;
+      color: $color-footer-icon;
+    }
+  }
 }

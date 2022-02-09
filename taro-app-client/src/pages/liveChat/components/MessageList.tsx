@@ -2,6 +2,7 @@ import { ScrollView, View } from "@tarojs/components";
 import { FC } from "react";
 import ActivityIndicator from "../../../components/ActivityIndicator";
 import MessageItem, { MessageItemProps } from "./MessageItem";
+import styles from "./MessageList.module.scss";
 
 export interface MessageListProps {
   height: number;
@@ -9,7 +10,7 @@ export interface MessageListProps {
 }
 const MessageList: FC<MessageListProps> = ({ height, messages }) => {
   return (
-    <ScrollView scrollY style={{ height }}>
+    <ScrollView className={styles.container} scrollY style={{ height }}>
       <Topblock loading />
       {messages.map((item, index) => {
         return <MessageItem key={index} {...item} />;

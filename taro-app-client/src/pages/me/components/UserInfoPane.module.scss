@@ -1,9 +1,40 @@
 @import "../../../style/variables.scss";
 
+$avatar-size: 125px;
+
 .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: $color-white;
-  padding: $spacing-v-md $spacing-h-md;
+  padding: $spacing-v-lg $spacing-h-lg;
 
   .avatar {
+    display: inline-flex;
+    image {
+      width: $avatar-size;
+      height: $avatar-size;
+      background: $color-bg-grey;
+      border-radius: $border-radius-lg;
+    }
+  }
+
+  .nameContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // background: rebeccapurple;
+    height: $avatar-size;
+    padding: $spacing-v-md $spacing-h-lg;
+
+    text:nth-child(1) {
+      font-size: $font-size-xl;
+      font-weight: bold;
+    }
+    text:nth-child(2) {
+      font-size: $font-size-base;
+      color: $color-grey-3;
+    }
   }
 }

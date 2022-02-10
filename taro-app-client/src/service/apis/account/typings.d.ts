@@ -6,6 +6,10 @@ declare namespace API {
       captcha: string;
     };
 
+    type LoginWeChatParams = {
+      jscode: string;
+    };
+
     type LoginResult = {
       accessToken: string;
     };
@@ -23,6 +27,12 @@ declare namespace API {
     type CaptchaResult = {
       image: string;
       code: string;
+    };
+
+    type CurrentResult = {
+      id: number;
+      nickname: string;
+      avatarUrl: string;
     };
   }
 }

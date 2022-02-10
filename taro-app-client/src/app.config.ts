@@ -1,9 +1,9 @@
 export default {
   pages: [
+    "pages/me/index",
     "pages/message/index",
     "pages/liveChat/index",
     "pages/login/index",
-    "pages/me/index",
   ],
   window: {
     backgroundTextStyle: "light",

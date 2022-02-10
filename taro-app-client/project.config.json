@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "spring-taro-chat",
   "description": "即时聊天",
-  "appid": "touristappid",
+  "appid": "wx1a1431e6fa20acbd",
   "setting": {
     "urlCheck": true,
     "es6": false,

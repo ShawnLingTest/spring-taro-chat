@@ -1,15 +1,25 @@
 import { View, Text, Image } from "@tarojs/components";
+import { FC } from "react";
 import styles from "./UserInfoPane.module.scss";
 
-const UserInfoPane = () => {
+export interface UserInfoPaneProps {
+  user: {
+    avatar: string;
+    name: string;
+    id: string;
+  } | null;
+  onToLogin: () => void;
+}
+
+const UserInfoPane: FC<UserInfoPaneProps> = ({ user, onToLogin }) => {
   return (
     <View className={styles.container}>
-      <View>
-        <Image src="" />
+      <View className={styles.avatar}>
+        <Image src={user?.avatar || ""} />
       </View>
-      <View>
-        <Text>Ling</Text>
-        <Text>ID: 2291293</Text>
+      <View className={styles.nameContainer}>
+        <Text>{user?.name || "----"}</Text>
+        <Text>ID: {user?.id || "----"}</Text>
       </View>
     </View>
   );

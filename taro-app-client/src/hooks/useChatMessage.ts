@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MessageItemProps } from "src/pages/liveChat/components/MessageItem";
+import { MessageItemProps } from "../pages/liveChat/components/MessageItem";
 import { getChatHistoryList } from "../service/apis/chat";
 
 const PAGE_SIZE = 15;

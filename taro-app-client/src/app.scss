@@ -1,2 +1,6 @@
-@import "./components/Message/style.scss";
-@import "./components/Icon/index.scss";
+@import "./style/index.scss";
+
+text {
+  font-size: $font-size-base;
+  color: $color-text-base;
+}

@@ -1,0 +1,29 @@
+$sm-size: 6px;
+$md-size: 88px;
+$lg-size: 128px;
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  image {
+    background: #eee;
+    border-radius: 12px;
+  }
+
+  .avatar-sm {
+    width: $sm-size;
+    height: $sm-size;
+  }
+  .avatar-md {
+    width: $md-size;
+    height: $md-size;
+  }
+  .avatar-lg {
+    width: $lg-size;
+    height: $lg-size;
+  }
+
+  .avatar-circle {
+    border-radius: 50%;
+  }
+}

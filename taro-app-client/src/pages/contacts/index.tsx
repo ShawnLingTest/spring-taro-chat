@@ -1,7 +1,7 @@
 import { View } from "@tarojs/components";
 
-const ListItem = () => {
+const Contacts = () => {
   return <View></View>;
 };
 
-export default ListItem;
+export default Contacts;

@@ -1,3 +1,5 @@
 export function useSoket() {
-  const linet = () => {};
+  const linet = () => {
+    
+  };
 }

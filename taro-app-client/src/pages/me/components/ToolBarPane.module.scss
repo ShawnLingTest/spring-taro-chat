@@ -1,0 +1,34 @@
+@import "../../../style/variables.scss";
+
+$tool-height: 100px;
+
+.container {
+  padding: $spacing-v-md 0;
+}
+
+.toolContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: $color-white;
+  height: $tool-height;
+
+  .toolIconContainer {
+    width: 100px;
+  }
+
+  .toolTitleContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-border-lighter;
+    box-sizing: border-box;
+    height: $tool-height;
+    padding-right: $spacing-h-lg;
+  }
+}
+
+.toolSpacing {
+  height: $spacing-v-md;
+}

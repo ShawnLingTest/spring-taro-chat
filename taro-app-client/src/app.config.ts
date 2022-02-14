@@ -1,11 +1,12 @@
 export default {
   pages: [
+    "pages/contacts/index",
     "pages/message/index",
     "pages/me/index",
     "pages/liveChat/index",
     "pages/login/index",
     "pages/myProfile/index",
-    "pages/contacts/index"
+    "pages/userProfile/index"
   ],
   window: {
     backgroundTextStyle: "light",

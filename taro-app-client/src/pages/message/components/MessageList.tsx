@@ -2,6 +2,7 @@ import MessageItem from "@/components/MessageItem";
 import VirtualList from "@tarojs/components/virtual-list";
 import { View } from "@tarojs/components";
 import { FC, memo, useRef } from "react";
+import { useNavigation } from "@/hooks/useNavigation";
 
 export interface MessageListProps {
   height: number;
@@ -17,10 +18,16 @@ const MessageRow = memo<{
   data: MessageListProps["list"];
   index: number;
 }>(({ id, style, data, index }) => {
+  const { navigateTo } = useNavigation();
   const item = data[index];
   return (
     <View id={id} style={style}>
       <MessageItem
+        onClick={() => {
+          navigateTo({
+            url: "/pages/liveChat/index",
+          });
+        }}
         user={{
           avatar: item.avatarUrl,
           name: item.nickname,

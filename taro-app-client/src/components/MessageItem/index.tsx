@@ -28,12 +28,8 @@ const MessageItem: FC<MessageItemProps> = ({
 }) => {
   const base = "message-item";
   return (
-    <View
-      className={classNames([`${base}-container`, className])}
-      hoverClass={`${base}-container-hover`}
-      {...others}
-    >
-      <Badge value={2}>
+    <View className={classNames([`${base}-container`, className])} {...others}>
+      <Badge value={badge > 0 ? badge : ""} dot={badge === 0}>
         <Avatar image={user.avatar} />
       </Badge>
       <View className={`${base}-content-container`}>

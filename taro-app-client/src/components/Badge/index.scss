@@ -24,8 +24,8 @@ $at-badge-box-shadow: 0 4px 8px 0
   /* elements */
   &__dot {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: -6px;
+    top: -6px;
     width: $at-badge-dot-size;
     height: $at-badge-dot-size;
     border-radius: 50%;

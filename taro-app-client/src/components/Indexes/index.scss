@@ -1,0 +1,51 @@
+@import "../../style/variables.scss";
+@import "../../style/mixins/index.scss";
+
+.indexes-container {
+  background-color: $color-bg-grey;
+  &__body {
+  }
+
+  &__content {
+  }
+
+  &__list {
+    &-title {
+      background-color: $color-bg-grey;
+      padding: $spacing-v-xs $spacing-h-lg;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      padding: $spacing-v-sm $spacing-h-xl;
+      background: $color-white;
+      @include active;
+      @include border-thin-bottom;
+    }
+
+    &-name {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding-left: $spacing-h-xl;
+      text {
+      }
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    overflow: hidden;
+    transform: translate3d(0, -50%, 0);
+    z-index: 10;
+
+    & > view {
+      padding: 2px $spacing-h-sm;
+      font-size: $font-size-sm;
+      text-align: center;
+    }
+  }
+}

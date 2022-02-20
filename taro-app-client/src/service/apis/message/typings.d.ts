@@ -7,6 +7,7 @@ declare namespace API {
       avatarUrl: string;
       nickname: string;
       lastContent: string;
+      lastTime: string;
     };
 
     type MessageListResult = API.Common.PageResult<MessageListItem>;

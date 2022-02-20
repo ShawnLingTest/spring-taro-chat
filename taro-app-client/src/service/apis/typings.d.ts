@@ -3,11 +3,13 @@ declare namespace API {
     type PageParams<T = any> = {
       pageSize: number;
       current: number;
-    } & T;
+    } & {
+      [P in keyof T]: T[P];
+    }
 
     type PageResult<T> = {
       total: number;
-      data: T[];
+      list: T[];
     };
   }
 }

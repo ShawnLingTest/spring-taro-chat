@@ -1,8 +1,16 @@
+@import "./mixins/index.scss";
+
 $hd: 2; // 基本单位
 
-$color-brand: #3dc465;
-$color-brand-light: #6ed38c;
+$color-brand: #7eb5a6;
+$color-brand-light: #9ad0ec;
 $color-brand-dark: #319d51;
+
+/* Color */
+$color-success: #13ce66;
+$color-error: #ff4949;
+$color-warning: #ffc82c;
+$color-info: #78a4fa;
 
 /* Color Palette */
 $color-black-0: #000;
@@ -43,7 +51,7 @@ $color-bg-lighter: tint($color-bg-light, 50%);
 $color-bg-grey: #f7f7f7;
 
 /* 边框颜色 */
-$color-border-base: #c5d9e8;
+$color-border-base: #e5eaec;
 $color-border-split: tint($color-border-base, 20%); // 分割线
 $color-border-light: tint($color-border-base, 30%);
 $color-border-lighter: tint($color-border-base, 50%);

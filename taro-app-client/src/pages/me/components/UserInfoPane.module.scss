@@ -26,7 +26,8 @@ $avatar-size: 125px;
     justify-content: space-between;
     // background: rebeccapurple;
     height: $avatar-size;
-    padding: $spacing-v-md $spacing-h-lg;
+    padding: $spacing-v-xs $spacing-h-lg;
+    box-sizing: border-box;
 
     text:nth-child(1) {
       font-size: $font-size-xl;
@@ -34,7 +35,18 @@ $avatar-size: 125px;
     }
     text:nth-child(2) {
       font-size: $font-size-base;
-      color: $color-grey-3;
+      color: $color-grey-2;
+    }
+  }
+
+  .tipContainer {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    height: $avatar-size;
+    padding: $spacing-v-xs $spacing-h-lg;
+    text {
+      color: $color-brand;
     }
   }
 }

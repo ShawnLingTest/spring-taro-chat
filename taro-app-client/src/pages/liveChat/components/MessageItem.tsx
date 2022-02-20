@@ -17,7 +17,7 @@ const MessageItem: FC<MessageItemProps> = ({ reverse, message, user }) => {
   return (
     <View className={`${styles.container} ${reverse ? styles.reverse : ""}`}>
       <View className={styles.avatar}>
-        <Avatar size="normal" circle image={user.avatar} />
+        <Avatar size="sm" image={user.avatar} />
       </View>
       <View className={styles.contentView}>
         <Text>{user.nickname}</Text>

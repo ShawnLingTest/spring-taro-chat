@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import { useUserCurrent } from "../../hooks/useUserCurrent";
 import { useSystemInfo } from "../../hooks/useSystemInfo";
 import UserInfoPane from "./components/UserInfoPane";
+import { useNavigation } from "../../hooks/useNavigation";
+import ToolBarPane from "./components/ToolBarPane";
 
 const Me = () => {
   const [refresherTriggered, setRefresherTriggered] = useState(false);
 
+  const { navigateTo } = useNavigation();
   const { windowHeight } = useSystemInfo();
   const { user, onLoadUser } = useUserCurrent();
 
@@ -22,6 +25,18 @@ const Me = () => {
   useEffect(() => {
     onLoadUser();
   }, []);
+
+  const onClickUserPane = () => {
+    if (user.id) {
+      navigateTo({
+        url: "/pages/myProfile/index",
+      });
+    } else {
+      navigateTo({
+        url: "/pages/login/index",
+      });
+    }
+  };
 
   return (
     <ScrollView
@@ -40,8 +55,9 @@ const Me = () => {
           avatar: user.avatarUrl,
           name: user.nickname,
         }}
-        onToLogin={() => {}}
+        onClick={onClickUserPane}
       />
+      <ToolBarPane />
     </ScrollView>
   );
 };

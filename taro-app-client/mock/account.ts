@@ -2,7 +2,7 @@ import mockjs from "mockjs";
 
 const current = JSON.stringify(
   mockjs.mock({
-    id: 12121223,
+    id: "@int()",
     nickname: "@CNAME()",
     avatarUrl: "@IMAGE(200x200)",
   })
